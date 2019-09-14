@@ -109,7 +109,7 @@ class SimpleQueryParser implements InputParser
             $s = new Sort();
             $order = 'ASC';
 
-            if (starts_with($field, $this->sortDescSign)) {
+            if (startsWith($field, $this->sortDescSign)) {
                 $order = 'DESC';
                 $field = mb_substr($field, mb_strlen($this->sortDescSign));
             }
